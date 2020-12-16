@@ -144,6 +144,59 @@ body {
 }
 
 /* Стиль по умолчанию */
+/* line 1, _page.scss */
+.sirius {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding-left: 30px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+/* line 12, _page.scss */
+.sirius__header {
+  padding-top: 15px;
+  align-items: center;
+}
+/* line 15, _page.scss */
+.sirius__header__logo {
+  display: flex;
+  text-decoration: none;
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* line 22, _page.scss */
+.sirius__header__logo img {
+  width: 32px;
+  display: block;
+  margin-right: 15px;
+}
+/* line 27, _page.scss */
+.sirius__header__logo h2 {
+  margin: 0;
+  color: #11142D;
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 600;
+}
+/* line 36, _page.scss */
+.sirius__small {
+  width: 180px;
+  margin-right: 20px;
+}
+/* line 40, _page.scss */
+.sirius__big {
+  width: calc(((100% - 200px) / 2) - 20px);
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
 /* Основные стили */
 /* Опциональные стили */
 /* Медиа запросы */
