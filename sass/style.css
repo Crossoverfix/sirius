@@ -35,6 +35,27 @@
   background-position: center;
   background-size: auto 12px;
 }
+/* line 32, _ico.scss */
+.icon__b-alert {
+  background-image: url("../assets/img/b-alert.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* line 38, _ico.scss */
+.icon__map {
+  background-image: url("../assets/img/map.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* line 44, _ico.scss */
+.icon__star {
+  background-image: url("../assets/img/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
 
 /* Иконки */
 @font-face {
@@ -807,6 +828,99 @@ body {
 .sirius__shortcuts {
   width: 100%;
   position: relative;
+}
+/* line 541, _page.scss */
+.sirius__shortcuts__title {
+  display: inline-block;
+  color: #11142D;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+/* line 549, _page.scss */
+.sirius__shortcuts__body {
+  padding-bottom: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+/* line 557, _page.scss */
+.sirius__shortcuts__item {
+  width: 56px;
+  height: 56px;
+  display: inline-block;
+  margin: 0 15px;
+  border-radius: 16px;
+  position: relative;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
+/* line 566, _page.scss */
+.sirius__shortcuts__item:hover {
+  opacity: 0.6;
+}
+/* line 570, _page.scss */
+.sirius__shortcuts__item.item-red {
+  background-color: #FF5E5E;
+}
+/* line 573, _page.scss */
+.sirius__shortcuts__item.item-blue {
+  background-color: #31C5E1;
+}
+/* line 576, _page.scss */
+.sirius__shortcuts__item.item-violet {
+  background-color: #6C5DD3;
+}
+/* line 579, _page.scss */
+.sirius__shortcuts__item.item-blue-dark {
+  background-color: #0B7AE5;
+}
+/* line 582, _page.scss */
+.sirius__shortcuts__item.item-yellow {
+  background-color: #FFE461;
+}
+/* line 586, _page.scss */
+.sirius__shortcuts__item__name {
+  position: absolute;
+  left: 50%;
+  width: 80px;
+  transform: translateX(-50%);
+  display: inline-block;
+  top: calc(100% + 16px);
+  text-align: center;
+  color: #000000;
+}
+/* line 596, _page.scss */
+.sirius__shortcuts__item__num {
+  position: absolute;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: normal;
+  color: #ffffff;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  vertical-align: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #FF5E5E;
+  right: -3px;
+  top: -2px;
+  box-shadow: 0px 3px 4px -1px rgba(255, 94, 94, 0.6);
+}
+/* line 613, _page.scss */
+.sirius__shortcuts__item i {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
 }
 
 /* Основные стили */
