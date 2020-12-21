@@ -1,0 +1,26 @@
+.icon{
+  &__search{
+    background-image: url("../assets/img/search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &__audio-search{
+    background-image: url("../assets/img/a-search.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &__option{
+    background-image: url("../assets/img/option.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px auto;
+  }
+  &__alert{
+    background-image: url("../assets/img/alert.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 20px;
+  }
+}

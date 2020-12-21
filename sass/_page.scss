@@ -9,9 +9,19 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: nowrap;
+  font-family: "Noto";
   &__header{
     padding-top: 15px;
     align-items: center;
+    min-height: 55px;
+    margin-bottom: 30px;
+    .sirius__big{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
     &__logo{
       display: flex;
       text-decoration: none;
@@ -19,6 +29,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
+      font-family: "Poppins";
       img{
         width: 32px;
         display: block;
@@ -32,6 +43,130 @@
         font-weight: 600;
       }
     }
+    &__search{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      background-color: rgba(247, 247, 247, 0.61);
+      height: 40px;
+      border-radius: 20px;
+      position: relative;
+      //overflow: hidden;
+      padding: 0 20px;
+      input{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        width: 100%;
+        line-height: 40px;
+        color: $SiText;
+        font-size: 14px;
+        font-weight: normal;
+        &::placeholder{
+         color: #808191;
+        }
+      }
+      a{
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+    &__btn{
+      display: inline-block;
+      height: 32px;
+      width: 32px;
+      text-decoration: none;
+      cursor: pointer;
+      margin-left: 12px;
+      &:hover{
+        opacity: 0.6;
+      }
+      i{
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      &-search{
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover{
+          opacity: 0.6;
+        }
+        i{
+          width: 100%;
+          height: 100%;
+          display: block;
+          background-size: auto 16px;
+        }
+      }
+      &-alert{
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        text-decoration: none;
+        cursor: pointer;
+        margin-left: 12px;
+        position: relative;
+        &__num{
+          position: absolute;
+          display: inline-block;
+          font-size: 10px;
+          font-weight: normal;
+          color: #ffffff;
+          width: 14px;
+          height: 14px;
+          line-height: 14px;
+          vertical-align: center;
+          text-align: center;
+          border-radius: 50%;
+          background-color: $SiRed;
+          right: 0;
+          top: 0;
+          box-shadow: 0px 3px 4px -1px rgba(255, 94, 94, 0.6);
+        }
+        &:hover{
+          i{
+            opacity: 0.6;
+          }
+        }
+        i{
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+      &-user{
+        margin-left: 12px;
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        overflow: hidden;
+        text-decoration: none;
+        cursor: pointer;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+    &__group-btn{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      margin-left: auto;
+    }
   }
   &__small{
     width: 180px;
@@ -41,5 +176,156 @@
     width: calc(((100% - 200px) / 2) - 20px);
     margin-right: 10px;
     margin-left: 10px;
+  }
+  &__side-bar{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    &__title{
+      display: inline-block;
+      margin-left: 4px;
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: normal;
+      color: $SiLightGrey;
+      margin-bottom: 20px;
+    }
+    &__link{
+      display: inline-block;
+      text-decoration: none;
+      margin-left: 4px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: normal;
+      color: $SiText;
+      margin-bottom: 20px;
+      &:hover{
+        opacity: 0.6;
+      }
+    }
+    &__separate{
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $SiFrame;
+      margin-bottom: 20px;
+    }
+  }
+  &__info-block{
+    width: 100%;
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 44px -10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    &__header{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      margin-bottom: 16px;
+      &__title{
+        display: inline-block;
+        font-size: 18px;
+        line-height: 24px;
+        color: #11142D;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+    &__body{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    &__footer{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+    }
+    &__col-colors{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      .col-colors{
+        &__item{
+          display: flex;
+          position: relative;
+          align-items: center;
+          justify-content: flex-start;
+          flex-wrap: nowrap;
+          color: $SiGrey;
+          font-size: 12px;
+          line-height: 16px;
+          margin-right: 24px;
+          i{
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin-right: 4px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+            border-radius: 3px;
+            background-color: $SiRed;
+          }
+        }
+        &__blue{
+          i{
+            background-color: $SiBlue;
+          }
+        }
+        &__violet{
+          i{
+            background-color: $SiViolet;
+          }
+        }
+        &__gray{
+          i{
+            background-color: $SiGrey;
+          }
+        }
+      }
+    }
+    &__chart{
+      width: 100%;
+      position: relative;
+      &:before{
+        content: "";
+        width: 100%;
+        height: 50%;
+        display: block;
+        border-top: 1px solid $SiFrame;
+        border-bottom: 1px solid $SiFrame;
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .chart{
+        width: 100%;
+        position: relative;
+        height: 180px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        margin-bottom: 20px;
+        border-top: 1px solid $SiFrame;
+        border-bottom: 1px solid $SiFrame;
+      }
+    }
   }
 }

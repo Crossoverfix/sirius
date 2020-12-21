@@ -1,5 +1,34 @@
 @charset "UTF-8";
 /* Переменные */
+/* line 2, _ico.scss */
+.icon__search {
+  background-image: url("../assets/img/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* line 8, _ico.scss */
+.icon__audio-search {
+  background-image: url("../assets/img/a-search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* line 14, _ico.scss */
+.icon__option {
+  background-image: url("../assets/img/option.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px auto;
+}
+/* line 20, _ico.scss */
+.icon__alert {
+  background-image: url("../assets/img/alert.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 20px;
+}
+
 /* Иконки */
 @font-face {
   font-family: 'Poppins';
@@ -127,6 +156,34 @@
   font-weight: 100;
   font-style: italic;
 }
+@font-face {
+  font-family: 'Noto';
+  src: url("../assets/font/NotoSans.eot");
+  src: url("../assets/font/NotoSans.eot?#iefix") format("embedded-opentype"), url("../assets/font/NotoSans.ttf") format("truetype"), url("../assets/font/NotoSans.woff") format("woff"), url("../assets/font/NotoSans.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto';
+  src: url("../assets/font/NotoSans-Bold.eot");
+  src: url("../assets/font/NotoSans-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/font/NotoSans-Bold.ttf") format("truetype"), url("../assets/font/NotoSans-Bold.woff") format("woff"), url("../assets/font/NotoSans-Bold.svg") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Noto';
+  src: url("../assets/font/NotoSans-Italic.eot");
+  src: url("../assets/font/NotoSans-Italic.eot?#iefix") format("embedded-opentype"), url("../assets/font/NotoSans-Italic.ttf") format("truetype"), url("../assets/font/NotoSans-Italic.woff") format("woff"), url("../assets/font/NotoSans-Italic.svg") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Noto';
+  src: url("../assets/font/NotoSans-BoldItalic.eot");
+  src: url("../assets/font/NotoSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../assets/font/NotoSans-BoldItalic.ttf") format("truetype"), url("../assets/font/NotoSans-BoldItalic.woff") format("woff"), url("../assets/font/NotoSans-BoldItalic.svg") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
 /* Модальное окно */
 /* line 4, style.scss */
 * {
@@ -138,9 +195,9 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', arial;
+  font-family: 'Noto', arial;
   overflow-x: hidden;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 /* Стиль по умолчанию */
@@ -156,13 +213,24 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
   flex-wrap: nowrap;
+  font-family: "Noto";
 }
-/* line 12, _page.scss */
+/* line 13, _page.scss */
 .sirius__header {
   padding-top: 15px;
   align-items: center;
+  min-height: 55px;
+  margin-bottom: 30px;
 }
-/* line 15, _page.scss */
+/* line 18, _page.scss */
+.sirius__header .sirius__big {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+/* line 25, _page.scss */
 .sirius__header__logo {
   display: flex;
   text-decoration: none;
@@ -170,14 +238,15 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  font-family: "Poppins";
 }
-/* line 22, _page.scss */
+/* line 33, _page.scss */
 .sirius__header__logo img {
   width: 32px;
   display: block;
   margin-right: 15px;
 }
-/* line 27, _page.scss */
+/* line 38, _page.scss */
 .sirius__header__logo h2 {
   margin: 0;
   color: #11142D;
@@ -185,16 +254,315 @@ body {
   line-height: 33px;
   font-weight: 600;
 }
-/* line 36, _page.scss */
+/* line 46, _page.scss */
+.sirius__header__search {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  background-color: rgba(247, 247, 247, 0.61);
+  height: 40px;
+  border-radius: 20px;
+  position: relative;
+  padding: 0 20px;
+}
+/* line 59, _page.scss */
+.sirius__header__search input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+  line-height: 40px;
+  color: #000000;
+  font-size: 14px;
+  font-weight: normal;
+}
+/* line 69, _page.scss */
+.sirius__header__search input::placeholder {
+  color: #808191;
+}
+/* line 73, _page.scss */
+.sirius__header__search a {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 81, _page.scss */
+.sirius__header__btn {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 12px;
+}
+/* line 88, _page.scss */
+.sirius__header__btn:hover {
+  opacity: 0.6;
+}
+/* line 91, _page.scss */
+.sirius__header__btn i {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* line 96, _page.scss */
+.sirius__header__btn-search {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* line 102, _page.scss */
+.sirius__header__btn-search:hover {
+  opacity: 0.6;
+}
+/* line 105, _page.scss */
+.sirius__header__btn-search i {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: auto 16px;
+}
+/* line 112, _page.scss */
+.sirius__header__btn-alert {
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 12px;
+  position: relative;
+}
+/* line 120, _page.scss */
+.sirius__header__btn-alert__num {
+  position: absolute;
+  display: inline-block;
+  font-size: 10px;
+  font-weight: normal;
+  color: #ffffff;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  vertical-align: center;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #FF5E5E;
+  right: 0;
+  top: 0;
+  box-shadow: 0px 3px 4px -1px rgba(255, 94, 94, 0.6);
+}
+/* line 138, _page.scss */
+.sirius__header__btn-alert:hover i {
+  opacity: 0.6;
+}
+/* line 142, _page.scss */
+.sirius__header__btn-alert i {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* line 148, _page.scss */
+.sirius__header__btn-user {
+  margin-left: 12px;
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* line 162, _page.scss */
+.sirius__header__group-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin-left: auto;
+}
+/* line 171, _page.scss */
 .sirius__small {
   width: 180px;
   margin-right: 20px;
 }
-/* line 40, _page.scss */
+/* line 175, _page.scss */
 .sirius__big {
   width: calc(((100% - 200px) / 2) - 20px);
   margin-right: 10px;
   margin-left: 10px;
+}
+/* line 180, _page.scss */
+.sirius__side-bar {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+/* line 187, _page.scss */
+.sirius__side-bar__title {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #808191;
+  margin-bottom: 20px;
+}
+/* line 196, _page.scss */
+.sirius__side-bar__link {
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #000000;
+  margin-bottom: 20px;
+}
+/* line 205, _page.scss */
+.sirius__side-bar__link:hover {
+  opacity: 0.6;
+}
+/* line 209, _page.scss */
+.sirius__side-bar__separate {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #E5E5E5;
+  margin-bottom: 20px;
+}
+/* line 217, _page.scss */
+.sirius__info-block {
+  width: 100%;
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0px 6px 44px -10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+/* line 228, _page.scss */
+.sirius__info-block__header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 16px;
+}
+/* line 236, _page.scss */
+.sirius__info-block__header__title {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 24px;
+  color: #11142D;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+/* line 245, _page.scss */
+.sirius__info-block__body {
+  width: 100%;
+  margin-bottom: 20px;
+}
+/* line 249, _page.scss */
+.sirius__info-block__footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+/* line 257, _page.scss */
+.sirius__info-block__col-colors {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+/* line 263, _page.scss */
+.sirius__info-block__col-colors .col-colors__item {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  color: #A1B9CD;
+  font-size: 12px;
+  line-height: 16px;
+  margin-right: 24px;
+}
+/* line 273, _page.scss */
+.sirius__info-block__col-colors .col-colors__item i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  background-color: #FF5E5E;
+}
+/* line 284, _page.scss */
+.sirius__info-block__col-colors .col-colors__blue i {
+  background-color: #74DBEF;
+}
+/* line 289, _page.scss */
+.sirius__info-block__col-colors .col-colors__violet i {
+  background-color: #6C5DD1;
+}
+/* line 294, _page.scss */
+.sirius__info-block__col-colors .col-colors__gray i {
+  background-color: #A1B9CD;
+}
+/* line 300, _page.scss */
+.sirius__info-block__chart {
+  width: 100%;
+  position: relative;
+}
+/* line 303, _page.scss */
+.sirius__info-block__chart:before {
+  content: "";
+  width: 100%;
+  height: 50%;
+  display: block;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 316, _page.scss */
+.sirius__info-block__chart .chart {
+  width: 100%;
+  position: relative;
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
 }
 
 /* Основные стили */
