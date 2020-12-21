@@ -11,6 +11,7 @@ body{
   font-family: 'Noto', arial;
   overflow-x: hidden;
   background-color: #ffffff;
+  box-sizing: border-box;
 } /* Стиль по умолчанию */
 @import "page"; /* Основные стили */
 @import "option"; /* Опциональные стили */

@@ -28,6 +28,13 @@
   background-position: center;
   background-size: auto 20px;
 }
+/* line 26, _ico.scss */
+.icon__scooter {
+  background-image: url("../assets/img/scooter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 12px;
+}
 
 /* Иконки */
 @font-face {
@@ -198,6 +205,7 @@ body {
   font-family: 'Noto', arial;
   overflow-x: hidden;
   background-color: #ffffff;
+  box-sizing: border-box;
 }
 
 /* Стиль по умолчанию */
@@ -537,7 +545,21 @@ body {
   position: relative;
 }
 /* line 303, _page.scss */
-.sirius__info-block__chart:before {
+.sirius__info-block__chart .chart {
+  width: 100%;
+  position: relative;
+  height: 280px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+  border-top: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+}
+/* line 315, _page.scss */
+.sirius__info-block__chart .chart:before {
   content: "";
   width: 100%;
   height: 50%;
@@ -550,19 +572,241 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 316, _page.scss */
-.sirius__info-block__chart .chart {
+/* line 328, _page.scss */
+.sirius__info-block__chart .chart:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  background-color: #E5E5E5;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* line 340, _page.scss */
+.sirius__info-block__chart .chart__section {
+  position: relative;
+  height: 100%;
+  min-width: 20px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background: linear-gradient(180deg, #F5F8FB 0%, rgba(245, 248, 251, 0) 100%);
+}
+/* line 352, _page.scss */
+.sirius__info-block__chart .chart__section:nth-child(2n) {
+  background: #ffffff;
+}
+/* line 355, _page.scss */
+.sirius__info-block__chart .chart__section__name {
+  position: absolute;
+  left: 50%;
+  bottom: -28px;
+  color: #A1B9CD;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+  transform: translateX(-50%);
+}
+/* line 365, _page.scss */
+.sirius__info-block__chart .chart__section__value {
+  position: relative;
+  width: 8px;
+  margin: 0 2px;
+  border-radius: 2px;
+  z-index: 2;
+  background-color: #FF5E5E;
+}
+/* line 373, _page.scss */
+.sirius__info-block__chart .chart__section__value.value__blue {
+  background-color: #74DBEF;
+}
+/* line 376, _page.scss */
+.sirius__info-block__chart .chart__section__value.value__grey {
+  background-color: #A1B9CD;
+}
+/* line 379, _page.scss */
+.sirius__info-block__chart .chart__section__value.value__violet {
+  background-color: #6C5DD1;
+}
+/* line 388, _page.scss */
+.sirius__news {
   width: 100%;
   position: relative;
-  height: 180px;
+  box-shadow: 0px 6px 44px -10px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+/* line 396, _page.scss */
+.sirius__news__header {
+  margin-bottom: 20px;
+  width: 100%;
+}
+/* line 399, _page.scss */
+.sirius__news__header__title {
+  margin: 0;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 24px;
+  color: #11142D;
+  font-weight: normal;
+}
+/* line 409, _page.scss */
+.sirius__news__body {
+  width: 100%;
+}
+/* line 412, _page.scss */
+.sirius__news__footer {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-wrap: nowrap;
-  margin-bottom: 20px;
-  border-top: 1px solid #E5E5E5;
+}
+/* line 418, _page.scss */
+.sirius__news__footer__btn {
+  display: inline-block;
+  text-decoration: none;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 18px;
+  padding: 0 26px;
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: normal;
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+/* line 429, _page.scss */
+.sirius__news__footer__btn:hover {
+  opacity: 0.6;
+}
+/* line 433, _page.scss */
+.sirius__news__footer__btn.btn-violet {
+  background-color: #6C5DD1;
+  color: #FBFBFC;
+}
+/* line 437, _page.scss */
+.sirius__news__footer__btn.btn-white {
+  background-color: #FBFBFC;
+  color: #000000;
+}
+/* line 444, _page.scss */
+.sirius__news__card {
+  position: relative;
+  width: 100%;
+  padding: 16px 0;
   border-bottom: 1px solid #E5E5E5;
+}
+/* line 449, _page.scss */
+.sirius__news__card:last-child {
+  border-bottom: none;
+}
+/* line 452, _page.scss */
+.sirius__news__card__header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 8px;
+}
+/* line 461, _page.scss */
+.sirius__news__card__header .icon {
+  width: 20px;
+  height: 20px;
+  background-color: #2A72E0;
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  margin-right: 8px;
+}
+/* line 471, _page.scss */
+.sirius__news__card__header__category {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+  font-weight: normal;
+}
+/* line 478, _page.scss */
+.sirius__news__card__header__date {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 20px;
+  color: #A1B9CD;
+  font-weight: normal;
+  margin-left: auto;
+}
+/* line 486, _page.scss */
+.sirius__news__card__header__status {
+  margin-left: 10px;
+  display: inline-block;
+  font-size: 10px;
+  line-height: 14px;
+  vertical-align: middle;
+  height: 14px;
+  padding: 0 4px;
+  background-color: rgba(97, 201, 89, 0.6);
+  color: #FBFBFC;
+  font-weight: normal;
+  border-radius: 7px;
+}
+/* line 500, _page.scss */
+.sirius__news__card__title {
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+/* line 509, _page.scss */
+.sirius__news__card__title:hover {
+  opacity: 0.6;
+}
+/* line 513, _page.scss */
+.sirius__news__card__text {
+  display: inline-block;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #000000;
+  text-decoration: none;
+}
+/* line 521, _page.scss */
+.sirius__news__card__text b {
+  font-weight: bold;
+}
+/* line 523, _page.scss */
+.sirius__news__card__text b.red {
+  color: #FF5E5E;
+}
+/* line 528, _page.scss */
+.sirius__news__card__content {
+  display: inline-block;
+  border-radius: 8px;
+  float: right;
+  height: 48px;
+  margin: 0 0 0 5px;
+}
+/* line 537, _page.scss */
+.sirius__shortcuts {
+  width: 100%;
+  position: relative;
 }
 
 /* Основные стили */

@@ -300,23 +300,10 @@
     &__chart{
       width: 100%;
       position: relative;
-      &:before{
-        content: "";
-        width: 100%;
-        height: 50%;
-        display: block;
-        border-top: 1px solid $SiFrame;
-        border-bottom: 1px solid $SiFrame;
-        z-index: 1;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-      }
       .chart{
         width: 100%;
         position: relative;
-        height: 180px;
+        height: 280px;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -325,7 +312,230 @@
         margin-bottom: 20px;
         border-top: 1px solid $SiFrame;
         border-bottom: 1px solid $SiFrame;
+        &:before{
+          content: "";
+          width: 100%;
+          height: 50%;
+          display: block;
+          border-top: 1px solid $SiFrame;
+          border-bottom: 1px solid $SiFrame;
+          z-index: 1;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:after{
+          content: "";
+          width: 100%;
+          height: 1px;
+          display: block;
+          z-index: 1;
+          position: absolute;
+          background-color: $SiFrame;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &__section{
+          position: relative;
+          height: 100%;
+          min-width: 20px;
+          flex-grow: 1;
+          flex-shrink: 0;
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: center;
+          flex-wrap: nowrap;
+          background: linear-gradient(180deg, #F5F8FB 0%, rgba(245, 248, 251, 0) 100%);
+          &:nth-child(2n){
+            background: #ffffff;
+          }
+          &__name{
+            position: absolute;
+            left: 50%;
+            bottom: -28px;
+            color: $SiGrey;
+            display: inline-block;
+            font-size: 12px;
+            line-height: 20px;
+            transform: translateX(-50%);
+          }
+          &__value{
+            position: relative;
+            width: 8px;
+            margin: 0 2px;
+            border-radius: 2px;
+            z-index: 2;
+            background-color: $SiRed;
+            &.value{
+              &__blue{
+                background-color: $SiBlue;
+              }
+              &__grey{
+                background-color: $SiGrey;
+              }
+              &__violet{
+                background-color: $SiViolet;
+              }
+            }
+          }
+        }
       }
     }
+  }
+  &__news{
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 6px 44px -10px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 40px;
+    &__header{
+      margin-bottom: 20px;
+      width: 100%;
+      &__title{
+        margin: 0;
+        display: inline-block;
+        font-size: 18px;
+        line-height: 24px;
+        color: #11142D;
+        font-weight: normal;
+      }
+
+    }
+    &__body{
+      width: 100%;
+    }
+    &__footer{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      &__btn{
+        display: inline-block;
+        text-decoration: none;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 18px;
+        padding: 0 26px;
+        margin-right: 8px;
+        font-size: 14px;
+        font-weight: normal;
+        box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+        &:hover{
+          opacity: 0.6;
+        }
+        &.btn{
+          &-violet{
+            background-color: $SiViolet;
+            color: $SiWhite;
+          }
+          &-white{
+            background-color: $SiWhite;
+            color: $SiText;
+          }
+        }
+      }
+    }
+    &__card{
+      position: relative;
+      width: 100%;
+      padding: 16px 0;
+      border-bottom: 1px solid $SiFrame;
+      &:last-child{
+        border-bottom: none;
+      }
+      &__header{
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        margin-bottom: 8px;
+        .icon{
+          width: 20px;
+          height: 20px;
+          background-color: #2A72E0;
+          border-radius: 4px;
+          position: relative;
+          display: inline-block;
+          color: #ffffff;
+          margin-right: 8px;
+        }
+        &__category{
+          display: inline-block;
+          font-size: 14px;
+          line-height: 20px;
+          color: $SiText;
+          font-weight: normal;
+        }
+        &__date{
+          display: inline-block;
+          font-size: 12px;
+          line-height: 20px;
+          color: $SiGrey;
+          font-weight: normal;
+          margin-left: auto;
+        }
+        &__status{
+          margin-left: 10px;
+          display: inline-block;
+          font-size: 10px;
+          line-height: 14px;
+          vertical-align: middle;
+          height: 14px;
+          padding: 0 4px;
+          background-color: rgba(97, 201, 89, 0.6);
+          color: $SiWhite;
+          font-weight: normal;
+          border-radius: 7px;
+        }
+      }
+      &__title{
+        display: inline-block;
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: bold;
+        color: $SiText;
+        text-decoration: none;
+        margin-bottom: 8px;
+        &:hover{
+          opacity: 0.6;
+        }
+      }
+      &__text{
+        display: inline-block;
+        width: 100%;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: normal;
+        color: $SiText;
+        text-decoration: none;
+        b{
+          font-weight: bold;
+          &.red{
+            color: $SiRed;
+          }
+        }
+      }
+      &__content{
+        display: inline-block;
+        border-radius: 8px;
+        float: right;
+        height: 48px;
+        margin: 0 0 0 5px;
+      }
+    }
+  }
+  &__shortcuts{
+    width: 100%;
+    position: relative;
   }
 }
