@@ -41,10 +41,30 @@
     background-position: center;
     background-size: contain;
   }
+  &__map-d{
+    background-image: url("../assets/img/map-d.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &__filter{
+    background-image: url("../assets/img/filter.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
   &__star{
     background-image: url("../assets/img/star.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+  }
+  &__arr{
+   &-d{
+     background-image: url("../assets/img/arr-d.svg");
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: contain;
+   }
   }
 }

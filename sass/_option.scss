@@ -1,0 +1,194 @@
+.no-shrink{
+  flex-shrink: 0;
+}
+.no-margin{
+  margin: 0;
+  &-b{
+    margin-bottom: 0;
+  }
+  &-t{
+    margin-top: 0;
+  }
+  &-l{
+    margin-left: 0;
+  }
+  &-r{
+    margin-right: 0;
+  }
+  &-x{
+    margin-left: 0;
+    margin-right: 0;
+  }
+  &-y{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.mod{
+  &-wd{
+    &-auto{
+      width: auto;
+    }
+    &-100{
+      width: 100%;
+    }
+    &-50{
+      width: 50%;
+    }
+    &-25{
+      width: 25%;
+    }
+  }
+  &-pd{
+    &-l{
+      &-5{
+        padding-left: 5px;
+      }
+      &-10{
+        padding-left: 10px;
+      }
+      &-15{
+        padding-left: 15px;
+      }
+      &-20{
+        padding-left: 20px;
+      }
+    }
+    &-r{
+      &-5{
+        padding-right: 5px;
+      }
+      &-10{
+        padding-right: 10px;
+      }
+      &-15{
+        padding-right: 15px;
+      }
+      &-20{
+        padding-right: 20px;
+      }
+    }
+    &-t{
+      &-5{
+        padding-top: 5px;
+      }
+      &-10{
+        padding-top: 10px;
+      }
+      &-15{
+        padding-top: 15px;
+      }
+      &-20{
+        padding-top: 20px;
+      }
+    }
+    &-b{
+      &-5{
+        padding-bottom: 5px;
+      }
+      &-10{
+        padding-bottom: 10px;
+      }
+      &-15{
+        padding-bottom: 15px;
+      }
+      &-20{
+        padding-bottom: 20px;
+      }
+    }
+  }
+  &-mr{
+    &-t{
+      &-5{
+        margin-top: 5px;
+      }
+      &-10{
+        margin-top: 10px;
+      }
+      &-15{
+        margin-top: 15px;
+      }
+      &-20{
+        margin-top: 20px;
+      }
+      &-30{
+        margin-top: 30px;
+      }
+      &-40{
+        margin-top: 40px;
+      }
+      &-50{
+        margin-top: 50px;
+      }
+    }
+    &-b{
+      &-5{
+        margin-bottom: 5px;
+      }
+      &-10{
+        margin-bottom: 10px;
+      }
+      &-15{
+        margin-bottom: 15px;
+      }
+      &-20{
+        margin-bottom: 20px;
+      }
+      &-30{
+        margin-bottom: 30px;
+      }
+      &-40{
+        margin-bottom: 40px;
+      }
+      &-50{
+        margin-bottom: 50px;
+      }
+    }
+    &-r{
+      &-5{
+        margin-right: 5px;
+      }
+      &-10{
+        margin-right: 10px;
+      }
+      &-15{
+        margin-right: 15px;
+      }
+      &-20{
+        margin-right: 20px;
+      }
+      &-30{
+        margin-right: 30px;
+      }
+      &-40{
+        margin-right: 40px;
+      }
+      &-50{
+        margin-right: 50px;
+      }
+    }
+    &-l{
+      &-5{
+        margin-left: 5px;
+      }
+      &-10{
+        margin-left: 10px;
+      }
+      &-15{
+        margin-left: 15px;
+      }
+      &-20{
+        margin-left: 20px;
+      }
+      &-30{
+        margin-left: 30px;
+      }
+      &-40{
+        margin-left: 40px;
+      }
+      &-50{
+        margin-left: 50px;
+      }
+    }
+  }
+}

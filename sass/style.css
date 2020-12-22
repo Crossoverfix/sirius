@@ -50,8 +50,29 @@
   background-size: contain;
 }
 /* line 44, _ico.scss */
+.icon__map-d {
+  background-image: url("../assets/img/map-d.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* line 50, _ico.scss */
+.icon__filter {
+  background-image: url("../assets/img/filter.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* line 56, _ico.scss */
 .icon__star {
   background-image: url("../assets/img/star.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+/* line 63, _ico.scss */
+.icon__arr-d {
+  background-image: url("../assets/img/arr-d.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -426,12 +447,27 @@ body {
   margin-right: 20px;
 }
 /* line 175, _page.scss */
+.sirius__fix-siz {
+  width: auto;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+/* line 180, _page.scss */
 .sirius__big {
-  width: calc(((100% - 200px) / 2) - 20px);
+  width: calc(100% - 200px);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+/* line 188, _page.scss */
+.sirius__half {
+  width: 50%;
   margin-right: 10px;
   margin-left: 10px;
 }
-/* line 180, _page.scss */
+/* line 193, _page.scss */
 .sirius__side-bar {
   width: 100%;
   position: relative;
@@ -440,7 +476,7 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
 }
-/* line 187, _page.scss */
+/* line 200, _page.scss */
 .sirius__side-bar__title {
   display: inline-block;
   margin-left: 4px;
@@ -450,22 +486,29 @@ body {
   color: #808191;
   margin-bottom: 20px;
 }
-/* line 196, _page.scss */
+/* line 209, _page.scss */
 .sirius__side-bar__link {
   display: inline-block;
   text-decoration: none;
-  margin-left: 4px;
+  padding: 4px;
   font-size: 14px;
   line-height: 20px;
   font-weight: normal;
   color: #000000;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  width: 100%;
+  border-radius: 4px;
 }
-/* line 205, _page.scss */
+/* line 220, _page.scss */
 .sirius__side-bar__link:hover {
-  opacity: 0.6;
+  background-color: #E5E5E5;
 }
-/* line 209, _page.scss */
+/* line 224, _page.scss */
+.sirius__side-bar__link.active {
+  background-color: #6C5DD1;
+  color: #FBFBFC;
+}
+/* line 229, _page.scss */
 .sirius__side-bar__separate {
   display: block;
   width: 100%;
@@ -473,7 +516,87 @@ body {
   background-color: #E5E5E5;
   margin-bottom: 20px;
 }
-/* line 217, _page.scss */
+/* line 237, _page.scss */
+.sirius__side-block {
+  width: 280px;
+  background: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 0 12px 2px rgba(227, 230, 236, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 20px;
+}
+/* line 248, _page.scss */
+.sirius__side-block__title {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 17px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #11142D;
+}
+/* line 259, _page.scss */
+.sirius__side-block__big-num {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 17px;
+  font-size: 56px;
+  font-weight: bold;
+  line-height: 84px;
+  color: #0A0B11;
+}
+/* line 270, _page.scss */
+.sirius__side-block__info {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+/* line 279, _page.scss */
+.sirius__side-block__info__value {
+  width: 20px;
+  margin: 0 2px;
+}
+/* line 283, _page.scss */
+.sirius__side-block__info__value.value-red {
+  background-color: #FF5E5E;
+}
+/* line 286, _page.scss */
+.sirius__side-block__info__value.value-green {
+  background-color: rgba(97, 201, 89, 0.6);
+}
+/* line 292, _page.scss */
+.sirius__side-block__btn {
+  text-decoration: none;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 12px;
+  padding: 0 18px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  background-color: #ffffff;
+  color: #808191;
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+/* line 305, _page.scss */
+.sirius__side-block__btn:hover {
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.6);
+}
+/* line 310, _page.scss */
 .sirius__info-block {
   width: 100%;
   position: relative;
@@ -486,7 +609,7 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
 }
-/* line 228, _page.scss */
+/* line 321, _page.scss */
 .sirius__info-block__header {
   width: 100%;
   display: flex;
@@ -496,7 +619,7 @@ body {
   flex-wrap: nowrap;
   margin-bottom: 16px;
 }
-/* line 236, _page.scss */
+/* line 329, _page.scss */
 .sirius__info-block__header__title {
   display: inline-block;
   font-size: 18px;
@@ -505,12 +628,12 @@ body {
   margin-bottom: 0;
   margin-top: 0;
 }
-/* line 245, _page.scss */
+/* line 338, _page.scss */
 .sirius__info-block__body {
   width: 100%;
   margin-bottom: 20px;
 }
-/* line 249, _page.scss */
+/* line 342, _page.scss */
 .sirius__info-block__footer {
   width: 100%;
   display: flex;
@@ -519,14 +642,14 @@ body {
   justify-content: flex-start;
   flex-wrap: nowrap;
 }
-/* line 257, _page.scss */
+/* line 350, _page.scss */
 .sirius__info-block__col-colors {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
 }
-/* line 263, _page.scss */
+/* line 356, _page.scss */
 .sirius__info-block__col-colors .col-colors__item {
   display: flex;
   position: relative;
@@ -538,7 +661,7 @@ body {
   line-height: 16px;
   margin-right: 24px;
 }
-/* line 273, _page.scss */
+/* line 366, _page.scss */
 .sirius__info-block__col-colors .col-colors__item i {
   display: inline-block;
   width: 8px;
@@ -548,24 +671,24 @@ body {
   border-radius: 3px;
   background-color: #FF5E5E;
 }
-/* line 284, _page.scss */
+/* line 377, _page.scss */
 .sirius__info-block__col-colors .col-colors__blue i {
   background-color: #74DBEF;
 }
-/* line 289, _page.scss */
+/* line 382, _page.scss */
 .sirius__info-block__col-colors .col-colors__violet i {
   background-color: #6C5DD1;
 }
-/* line 294, _page.scss */
+/* line 387, _page.scss */
 .sirius__info-block__col-colors .col-colors__gray i {
   background-color: #A1B9CD;
 }
-/* line 300, _page.scss */
+/* line 393, _page.scss */
 .sirius__info-block__chart {
   width: 100%;
   position: relative;
 }
-/* line 303, _page.scss */
+/* line 396, _page.scss */
 .sirius__info-block__chart .chart {
   width: 100%;
   position: relative;
@@ -579,7 +702,7 @@ body {
   border-top: 1px solid #E5E5E5;
   border-bottom: 1px solid #E5E5E5;
 }
-/* line 315, _page.scss */
+/* line 408, _page.scss */
 .sirius__info-block__chart .chart:before {
   content: "";
   width: 100%;
@@ -593,7 +716,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 328, _page.scss */
+/* line 421, _page.scss */
 .sirius__info-block__chart .chart:after {
   content: "";
   width: 100%;
@@ -606,7 +729,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 340, _page.scss */
+/* line 433, _page.scss */
 .sirius__info-block__chart .chart__section {
   position: relative;
   height: 100%;
@@ -620,11 +743,11 @@ body {
   flex-wrap: nowrap;
   background: linear-gradient(180deg, #F5F8FB 0%, rgba(245, 248, 251, 0) 100%);
 }
-/* line 352, _page.scss */
+/* line 445, _page.scss */
 .sirius__info-block__chart .chart__section:nth-child(2n) {
   background: #ffffff;
 }
-/* line 355, _page.scss */
+/* line 448, _page.scss */
 .sirius__info-block__chart .chart__section__name {
   position: absolute;
   left: 50%;
@@ -635,7 +758,7 @@ body {
   line-height: 20px;
   transform: translateX(-50%);
 }
-/* line 365, _page.scss */
+/* line 458, _page.scss */
 .sirius__info-block__chart .chart__section__value {
   position: relative;
   width: 8px;
@@ -644,19 +767,19 @@ body {
   z-index: 2;
   background-color: #FF5E5E;
 }
-/* line 373, _page.scss */
+/* line 466, _page.scss */
 .sirius__info-block__chart .chart__section__value.value__blue {
   background-color: #74DBEF;
 }
-/* line 376, _page.scss */
+/* line 469, _page.scss */
 .sirius__info-block__chart .chart__section__value.value__grey {
   background-color: #A1B9CD;
 }
-/* line 379, _page.scss */
+/* line 472, _page.scss */
 .sirius__info-block__chart .chart__section__value.value__violet {
   background-color: #6C5DD1;
 }
-/* line 388, _page.scss */
+/* line 481, _page.scss */
 .sirius__news {
   width: 100%;
   position: relative;
@@ -666,12 +789,12 @@ body {
   padding: 20px;
   margin-bottom: 40px;
 }
-/* line 396, _page.scss */
+/* line 489, _page.scss */
 .sirius__news__header {
   margin-bottom: 20px;
   width: 100%;
 }
-/* line 399, _page.scss */
+/* line 492, _page.scss */
 .sirius__news__header__title {
   margin: 0;
   display: inline-block;
@@ -680,11 +803,11 @@ body {
   color: #11142D;
   font-weight: normal;
 }
-/* line 409, _page.scss */
+/* line 502, _page.scss */
 .sirius__news__body {
   width: 100%;
 }
-/* line 412, _page.scss */
+/* line 505, _page.scss */
 .sirius__news__footer {
   width: 100%;
   display: flex;
@@ -692,7 +815,7 @@ body {
   align-items: flex-start;
   justify-content: flex-start;
 }
-/* line 418, _page.scss */
+/* line 511, _page.scss */
 .sirius__news__footer__btn {
   display: inline-block;
   text-decoration: none;
@@ -705,32 +828,32 @@ body {
   font-weight: normal;
   box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
-/* line 429, _page.scss */
+/* line 522, _page.scss */
 .sirius__news__footer__btn:hover {
   opacity: 0.6;
 }
-/* line 433, _page.scss */
+/* line 526, _page.scss */
 .sirius__news__footer__btn.btn-violet {
   background-color: #6C5DD1;
   color: #FBFBFC;
 }
-/* line 437, _page.scss */
+/* line 530, _page.scss */
 .sirius__news__footer__btn.btn-white {
   background-color: #FBFBFC;
   color: #000000;
 }
-/* line 444, _page.scss */
+/* line 537, _page.scss */
 .sirius__news__card {
   position: relative;
   width: 100%;
   padding: 16px 0;
   border-bottom: 1px solid #E5E5E5;
 }
-/* line 449, _page.scss */
+/* line 542, _page.scss */
 .sirius__news__card:last-child {
   border-bottom: none;
 }
-/* line 452, _page.scss */
+/* line 545, _page.scss */
 .sirius__news__card__header {
   width: 100%;
   position: relative;
@@ -741,7 +864,7 @@ body {
   flex-wrap: nowrap;
   margin-bottom: 8px;
 }
-/* line 461, _page.scss */
+/* line 554, _page.scss */
 .sirius__news__card__header .icon {
   width: 20px;
   height: 20px;
@@ -752,7 +875,7 @@ body {
   color: #ffffff;
   margin-right: 8px;
 }
-/* line 471, _page.scss */
+/* line 564, _page.scss */
 .sirius__news__card__header__category {
   display: inline-block;
   font-size: 14px;
@@ -760,7 +883,7 @@ body {
   color: #000000;
   font-weight: normal;
 }
-/* line 478, _page.scss */
+/* line 571, _page.scss */
 .sirius__news__card__header__date {
   display: inline-block;
   font-size: 12px;
@@ -769,7 +892,7 @@ body {
   font-weight: normal;
   margin-left: auto;
 }
-/* line 486, _page.scss */
+/* line 579, _page.scss */
 .sirius__news__card__header__status {
   margin-left: 10px;
   display: inline-block;
@@ -783,7 +906,7 @@ body {
   font-weight: normal;
   border-radius: 7px;
 }
-/* line 500, _page.scss */
+/* line 593, _page.scss */
 .sirius__news__card__title {
   display: inline-block;
   width: 100%;
@@ -794,11 +917,11 @@ body {
   text-decoration: none;
   margin-bottom: 8px;
 }
-/* line 509, _page.scss */
+/* line 602, _page.scss */
 .sirius__news__card__title:hover {
   opacity: 0.6;
 }
-/* line 513, _page.scss */
+/* line 606, _page.scss */
 .sirius__news__card__text {
   display: inline-block;
   width: 100%;
@@ -808,15 +931,15 @@ body {
   color: #000000;
   text-decoration: none;
 }
-/* line 521, _page.scss */
+/* line 614, _page.scss */
 .sirius__news__card__text b {
   font-weight: bold;
 }
-/* line 523, _page.scss */
+/* line 616, _page.scss */
 .sirius__news__card__text b.red {
   color: #FF5E5E;
 }
-/* line 528, _page.scss */
+/* line 621, _page.scss */
 .sirius__news__card__content {
   display: inline-block;
   border-radius: 8px;
@@ -824,12 +947,12 @@ body {
   height: 48px;
   margin: 0 0 0 5px;
 }
-/* line 537, _page.scss */
+/* line 630, _page.scss */
 .sirius__shortcuts {
   width: 100%;
   position: relative;
 }
-/* line 541, _page.scss */
+/* line 634, _page.scss */
 .sirius__shortcuts__title {
   display: inline-block;
   color: #11142D;
@@ -838,7 +961,7 @@ body {
   line-height: 24px;
   margin-bottom: 24px;
 }
-/* line 549, _page.scss */
+/* line 642, _page.scss */
 .sirius__shortcuts__body {
   padding-bottom: 40px;
   width: 100%;
@@ -847,7 +970,7 @@ body {
   align-items: flex-start;
   justify-content: space-around;
 }
-/* line 557, _page.scss */
+/* line 650, _page.scss */
 .sirius__shortcuts__item {
   width: 56px;
   height: 56px;
@@ -858,31 +981,31 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
   text-decoration: none;
 }
-/* line 566, _page.scss */
+/* line 659, _page.scss */
 .sirius__shortcuts__item:hover {
   opacity: 0.6;
 }
-/* line 570, _page.scss */
+/* line 663, _page.scss */
 .sirius__shortcuts__item.item-red {
   background-color: #FF5E5E;
 }
-/* line 573, _page.scss */
+/* line 666, _page.scss */
 .sirius__shortcuts__item.item-blue {
   background-color: #31C5E1;
 }
-/* line 576, _page.scss */
+/* line 669, _page.scss */
 .sirius__shortcuts__item.item-violet {
   background-color: #6C5DD3;
 }
-/* line 579, _page.scss */
+/* line 672, _page.scss */
 .sirius__shortcuts__item.item-blue-dark {
   background-color: #0B7AE5;
 }
-/* line 582, _page.scss */
+/* line 675, _page.scss */
 .sirius__shortcuts__item.item-yellow {
   background-color: #FFE461;
 }
-/* line 586, _page.scss */
+/* line 679, _page.scss */
 .sirius__shortcuts__item__name {
   position: absolute;
   left: 50%;
@@ -893,7 +1016,7 @@ body {
   text-align: center;
   color: #000000;
 }
-/* line 596, _page.scss */
+/* line 689, _page.scss */
 .sirius__shortcuts__item__num {
   position: absolute;
   display: inline-block;
@@ -911,7 +1034,7 @@ body {
   top: -2px;
   box-shadow: 0px 3px 4px -1px rgba(255, 94, 94, 0.6);
 }
-/* line 613, _page.scss */
+/* line 706, _page.scss */
 .sirius__shortcuts__item i {
   width: 26px;
   height: 26px;
@@ -922,7 +1045,587 @@ body {
   transform: translate(-50%, -50%);
   background-size: contain;
 }
+/* line 718, _page.scss */
+.sirius__list {
+  width: 100%;
+  position: relative;
+  flex-grow: 1;
+}
+/* line 722, _page.scss */
+.sirius__list__header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  padding-bottom: 28px;
+}
+/* line 730, _page.scss */
+.sirius__list__header__info {
+  flex-grow: 1;
+}
+/* line 733, _page.scss */
+.sirius__list__header__title {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 51px;
+  color: #11142D;
+  width: 100%;
+}
+/* line 743, _page.scss */
+.sirius__list__header__sub-title {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 32px;
+  color: #11142D;
+}
+/* line 752, _page.scss */
+.sirius__list__header__setting {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+/* line 759, _page.scss */
+.sirius__list__header__setting__btn {
+  text-decoration: none;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 12px;
+  padding: 0 18px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  background-color: #ffffff;
+  color: #808191;
+}
+/* line 770, _page.scss */
+.sirius__list__header__setting__btn:hover {
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.6);
+}
+/* line 774, _page.scss */
+.sirius__list__header__setting__btn.btn-violet {
+  background-color: #6C5DD1;
+  color: #FBFBFC;
+}
+/* line 779, _page.scss */
+.sirius__list__header__setting__btn-icon {
+  margin-left: 16px;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.15);
+  position: relative;
+  padding: 9px;
+}
+/* line 788, _page.scss */
+.sirius__list__header__setting__btn-icon:hover {
+  box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.4);
+}
+/* line 791, _page.scss */
+.sirius__list__header__setting__btn-icon i {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  display: inline-block;
+}
+/* line 799, _page.scss */
+.sirius__list__header__setting__input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  position: relative;
+  height: 40px;
+  padding: 0 16px 0 20px;
+  background-color: rgba(229, 229, 229, 0.41);
+  border-radius: 16px;
+  margin: 0 8px;
+}
+/* line 811, _page.scss */
+.sirius__list__header__setting__input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: #000000;
+  font-size: 14px;
+  font-weight: normal;
+}
+/* line 821, _page.scss */
+.sirius__list__header__setting__input input::placeholder {
+  color: #808191;
+}
+/* line 825, _page.scss */
+.sirius__list__header__setting__input i {
+  height: 6px;
+  width: 12px;
+  display: inline-block;
+}
+/* line 833, _page.scss */
+.sirius__list__body {
+  width: 100%;
+  position: relative;
+  padding: 0 10px;
+}
+/* line 838, _page.scss */
+.sirius__list__table {
+  width: 100%;
+  position: relative;
+}
+/* line 841, _page.scss */
+.sirius__list__table .icon {
+  width: 20px;
+  height: 20px;
+  background-color: #2A72E0;
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+/* line 852, _page.scss */
+.sirius__list__table__row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  padding: 16px 0;
+  border-bottom: 1px solid #E5E5E5;
+}
+/* line 861, _page.scss */
+.sirius__list__table__row:last-child {
+  border-bottom: none;
+}
+/* line 865, _page.scss */
+.sirius__list__table__col {
+  flex-grow: 0;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  flex-wrap: wrap;
+}
+/* line 874, _page.scss */
+.sirius__list__table__col.align-left {
+  justify-content: flex-start;
+}
+/* line 877, _page.scss */
+.sirius__list__table__col.align-right {
+  justify-content: flex-end;
+}
+/* line 881, _page.scss */
+.sirius__list__table__col.col-5 {
+  width: 5%;
+}
+/* line 884, _page.scss */
+.sirius__list__table__col.col-10 {
+  width: 10%;
+}
+/* line 887, _page.scss */
+.sirius__list__table__col.col-12 {
+  width: 12%;
+}
+/* line 890, _page.scss */
+.sirius__list__table__col.col-14 {
+  width: 14%;
+}
+/* line 893, _page.scss */
+.sirius__list__table__col.col-15 {
+  width: 15%;
+}
+/* line 896, _page.scss */
+.sirius__list__table__col.col-20 {
+  width: 20%;
+}
+/* line 899, _page.scss */
+.sirius__list__table__col.col-25 {
+  width: 25%;
+}
+/* line 902, _page.scss */
+.sirius__list__table__col.col-30 {
+  width: 30%;
+}
+/* line 905, _page.scss */
+.sirius__list__table__col.col-35 {
+  width: 35%;
+}
+/* line 908, _page.scss */
+.sirius__list__table__col.col-40 {
+  width: 40%;
+}
+/* line 911, _page.scss */
+.sirius__list__table__col.col-45 {
+  width: 45%;
+}
+/* line 914, _page.scss */
+.sirius__list__table__col.col-50 {
+  width: 50%;
+}
+/* line 917, _page.scss */
+.sirius__list__table__col.col-55 {
+  width: 55%;
+}
+/* line 920, _page.scss */
+.sirius__list__table__col.col-60 {
+  width: 60%;
+}
+/* line 923, _page.scss */
+.sirius__list__table__col.col-65 {
+  width: 65%;
+}
+/* line 926, _page.scss */
+.sirius__list__table__col.col-70 {
+  width: 70%;
+}
+/* line 929, _page.scss */
+.sirius__list__table__col.col-75 {
+  width: 75%;
+}
+/* line 932, _page.scss */
+.sirius__list__table__col.col-80 {
+  width: 80%;
+}
+/* line 935, _page.scss */
+.sirius__list__table__col.col-85 {
+  width: 85%;
+}
+/* line 938, _page.scss */
+.sirius__list__table__col.col-90 {
+  width: 90%;
+}
+/* line 941, _page.scss */
+.sirius__list__table__col.col-95 {
+  width: 95%;
+}
+/* line 944, _page.scss */
+.sirius__list__table__col.col-100 {
+  width: 100%;
+}
+/* line 947, _page.scss */
+.sirius__list__table__col.col-a {
+  width: auto;
+  flex-grow: 1;
+}
+/* line 951, _page.scss */
+.sirius__list__table__col.col-at {
+  width: 100%;
+  flex-grow: 1;
+}
+/* line 959, _page.scss */
+.sirius__text {
+  font-size: 14px;
+  line-height: 20px;
+  display: inline-block;
+  color: #000000;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+/* line 966, _page.scss */
+.sirius__text-light {
+  font-size: 14px;
+  line-height: 20px;
+  display: inline-block;
+  color: #B2B3BD;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+/* line 974, _page.scss */
+.sirius__text-bold {
+  font-size: 14px;
+  line-height: 20px;
+  display: inline-block;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+/* line 983, _page.scss */
+.sirius__label {
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 8px;
+  border-radius: 9px;
+  background-color: #A1B9CD;
+  color: #FBFBFC;
+  font-size: 12px;
+  font-weight: normal;
+  white-space: nowrap;
+}
+/* line 994, _page.scss */
+.sirius__label-red {
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 8px;
+  border-radius: 9px;
+  background-color: #FF5E5E;
+  color: #FBFBFC;
+  font-size: 12px;
+  white-space: nowrap;
+  font-weight: normal;
+}
+/* line 1006, _page.scss */
+.sirius__label-green {
+  display: inline-block;
+  height: 18px;
+  line-height: 18px;
+  padding: 0 8px;
+  border-radius: 9px;
+  background-color: rgba(97, 201, 89, 0.6);
+  color: #FBFBFC;
+  font-size: 12px;
+  font-weight: normal;
+  white-space: nowrap;
+}
 
 /* Основные стили */
+/* line 1, _option.scss */
+.no-shrink {
+  flex-shrink: 0;
+}
+
+/* line 4, _option.scss */
+.no-margin {
+  margin: 0;
+}
+/* line 6, _option.scss */
+.no-margin-b {
+  margin-bottom: 0;
+}
+/* line 9, _option.scss */
+.no-margin-t {
+  margin-top: 0;
+}
+/* line 12, _option.scss */
+.no-margin-l {
+  margin-left: 0;
+}
+/* line 15, _option.scss */
+.no-margin-r {
+  margin-right: 0;
+}
+/* line 18, _option.scss */
+.no-margin-x {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 22, _option.scss */
+.no-margin-y {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* line 29, _option.scss */
+.mod-wd-auto {
+  width: auto;
+}
+/* line 32, _option.scss */
+.mod-wd-100 {
+  width: 100%;
+}
+/* line 35, _option.scss */
+.mod-wd-50 {
+  width: 50%;
+}
+/* line 38, _option.scss */
+.mod-wd-25 {
+  width: 25%;
+}
+/* line 44, _option.scss */
+.mod-pd-l-5 {
+  padding-left: 5px;
+}
+/* line 47, _option.scss */
+.mod-pd-l-10 {
+  padding-left: 10px;
+}
+/* line 50, _option.scss */
+.mod-pd-l-15 {
+  padding-left: 15px;
+}
+/* line 53, _option.scss */
+.mod-pd-l-20 {
+  padding-left: 20px;
+}
+/* line 58, _option.scss */
+.mod-pd-r-5 {
+  padding-right: 5px;
+}
+/* line 61, _option.scss */
+.mod-pd-r-10 {
+  padding-right: 10px;
+}
+/* line 64, _option.scss */
+.mod-pd-r-15 {
+  padding-right: 15px;
+}
+/* line 67, _option.scss */
+.mod-pd-r-20 {
+  padding-right: 20px;
+}
+/* line 72, _option.scss */
+.mod-pd-t-5 {
+  padding-top: 5px;
+}
+/* line 75, _option.scss */
+.mod-pd-t-10 {
+  padding-top: 10px;
+}
+/* line 78, _option.scss */
+.mod-pd-t-15 {
+  padding-top: 15px;
+}
+/* line 81, _option.scss */
+.mod-pd-t-20 {
+  padding-top: 20px;
+}
+/* line 86, _option.scss */
+.mod-pd-b-5 {
+  padding-bottom: 5px;
+}
+/* line 89, _option.scss */
+.mod-pd-b-10 {
+  padding-bottom: 10px;
+}
+/* line 92, _option.scss */
+.mod-pd-b-15 {
+  padding-bottom: 15px;
+}
+/* line 95, _option.scss */
+.mod-pd-b-20 {
+  padding-bottom: 20px;
+}
+/* line 102, _option.scss */
+.mod-mr-t-5 {
+  margin-top: 5px;
+}
+/* line 105, _option.scss */
+.mod-mr-t-10 {
+  margin-top: 10px;
+}
+/* line 108, _option.scss */
+.mod-mr-t-15 {
+  margin-top: 15px;
+}
+/* line 111, _option.scss */
+.mod-mr-t-20 {
+  margin-top: 20px;
+}
+/* line 114, _option.scss */
+.mod-mr-t-30 {
+  margin-top: 30px;
+}
+/* line 117, _option.scss */
+.mod-mr-t-40 {
+  margin-top: 40px;
+}
+/* line 120, _option.scss */
+.mod-mr-t-50 {
+  margin-top: 50px;
+}
+/* line 125, _option.scss */
+.mod-mr-b-5 {
+  margin-bottom: 5px;
+}
+/* line 128, _option.scss */
+.mod-mr-b-10 {
+  margin-bottom: 10px;
+}
+/* line 131, _option.scss */
+.mod-mr-b-15 {
+  margin-bottom: 15px;
+}
+/* line 134, _option.scss */
+.mod-mr-b-20 {
+  margin-bottom: 20px;
+}
+/* line 137, _option.scss */
+.mod-mr-b-30 {
+  margin-bottom: 30px;
+}
+/* line 140, _option.scss */
+.mod-mr-b-40 {
+  margin-bottom: 40px;
+}
+/* line 143, _option.scss */
+.mod-mr-b-50 {
+  margin-bottom: 50px;
+}
+/* line 148, _option.scss */
+.mod-mr-r-5 {
+  margin-right: 5px;
+}
+/* line 151, _option.scss */
+.mod-mr-r-10 {
+  margin-right: 10px;
+}
+/* line 154, _option.scss */
+.mod-mr-r-15 {
+  margin-right: 15px;
+}
+/* line 157, _option.scss */
+.mod-mr-r-20 {
+  margin-right: 20px;
+}
+/* line 160, _option.scss */
+.mod-mr-r-30 {
+  margin-right: 30px;
+}
+/* line 163, _option.scss */
+.mod-mr-r-40 {
+  margin-right: 40px;
+}
+/* line 166, _option.scss */
+.mod-mr-r-50 {
+  margin-right: 50px;
+}
+/* line 171, _option.scss */
+.mod-mr-l-5 {
+  margin-left: 5px;
+}
+/* line 174, _option.scss */
+.mod-mr-l-10 {
+  margin-left: 10px;
+}
+/* line 177, _option.scss */
+.mod-mr-l-15 {
+  margin-left: 15px;
+}
+/* line 180, _option.scss */
+.mod-mr-l-20 {
+  margin-left: 20px;
+}
+/* line 183, _option.scss */
+.mod-mr-l-30 {
+  margin-left: 30px;
+}
+/* line 186, _option.scss */
+.mod-mr-l-40 {
+  margin-left: 40px;
+}
+/* line 189, _option.scss */
+.mod-mr-l-50 {
+  margin-left: 50px;
+}
+
 /* Опциональные стили */
 /* Медиа запросы */

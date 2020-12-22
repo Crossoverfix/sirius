@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Def</title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous"></script>
+    <link href="sass/style.css" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="sirius sirius__header">
+        <div class="sirius__small">
+            <a href="#" class="sirius__header__logo">
+                <img alt="logo" src="assets/img/logo_s.svg">
+                <h2>Sirius IES</h2>
+            </a>
+        </div>
+        <div class="sirius__big">
+            <div class="sirius__half">
+                <label class="sirius__header__search">
+                    <input type="text" name="search" placeholder="Найти событие, нарушение, арендатора">
+                    <a href="#" class="icon__search"></a>
+                </label>
+            </div>
+            <a href="#" class="sirius__header__btn-search">
+                <i class="icon__audio-search"></i>
+            </a>
+            <div class="sirius__header__group-btn">
+                <a href="#" class="sirius__header__btn">
+                    <i class="icon__option"></i>
+                </a>
+                <a href="#" class="sirius__header__btn-alert">
+                    <i class="icon__alert"></i>
+                    <span class="sirius__header__btn-alert__num">2</span>
+                </a>
+                <a href="#" class="sirius__header__btn-user" style="background-image: url('assets/img/user.jpg')">
+                </a>
+            </div>
+        </div>
+
+    </div>
+</header>
+<main>
+    <div class="sirius sirius__body">
+        <div class="sirius__small no-shrink">
+            <div class="sirius__side-bar">
+                <span class="sirius__side-bar__title">Инструменты</span>
+                <a href="#" class="sirius__side-bar__link">События</a>
+                <a href="#" class="sirius__side-bar__link active">Нарушения</a>
+                <a href="#" class="sirius__side-bar__link">Штрафы</a>
+                <div class="sirius__side-bar__separate"></div>
+                <a href="#" class="sirius__side-bar__link">Зарегистрированные ТС</a>
+                <a href="#" class="sirius__side-bar__link">Типы объектов</a>
+                <a href="#" class="sirius__side-bar__link">Правила</a>
+                <a href="#" class="sirius__side-bar__link">Аренда</a>
+                <div class="sirius__side-bar__separate"></div>
+                <a href="#" class="sirius__side-bar__link">Карта</a>
+                <div class="sirius__side-bar__separate"></div>
+                <span class="sirius__side-bar__title">О системе</span>
+                <a href="#" class="sirius__side-bar__link">Правила анализа данных</a>
+                <a href="#" class="sirius__side-bar__link">Идентификация объекта</a>
+                <a href="#" class="sirius__side-bar__link">Обаботанные данные</a>
+            </div>
+        </div>
+        <div class="sirius__big">
+            <div class="sirius__list">
+                <div class="sirius__list__header">
+                    <div class="sirius__list__header__info">
+                        <h2 class="sirius__list__header__title">Нарушения</h2>
+                        <h3 class="sirius__list__header__sub-title">Созданные по событиям нарушения</h3>
+                    </div>
+                    <div class="sirius__list__header__setting">
+                        <a href="#" class="sirius__list__header__setting__btn btn-violet">Списком</a>
+                        <a href="#" class="sirius__list__header__setting__btn">Таблицей</a>
+                        <label class="sirius__list__header__setting__input">
+                            <input type="text" placeholder="Дата" style="width: 90px;">
+                            <i class="icon__arr-d"></i>
+                        </label>
+                        <a href="#" class="sirius__list__header__setting__btn-icon">
+                            <i class="icon__map-d"></i>
+                        </a>
+                        <a href="#" class="sirius__list__header__setting__btn-icon">
+                            <i class="icon__filter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="sirius__list__body">
+                    <div class="sirius__list__table">
+                        <div class="sirius__list__table__row">
+                            <div class="sirius__list__table__col col-12">
+                                <span class="sirius__text-light">20.10.2020<br>14:56</span>
+                            </div>
+                            <div class="sirius__list__table__col col-12">
+                                <span class="sirius__text-light">20.10.2020<br>14:56</span>
+                            </div>
+                            <div class="sirius__list__table__col col-14">
+                                <i class="icon icon__scooter"></i>
+                                <span class="sirius__text no-margin-b">Самокат</span>
+                            </div>
+                            <div class="sirius__list__table__col col-50 align-left">
+                                <span class="sirius__text-bold mod-wd-100">Арендатор: Иванов Сергей В.</span>
+                                <span class="sirius__text">г. Сочи, ул. Космонавтов 32</span>
+                            </div>
+                            <div class="sirius__list__table__col col-12 align-right">
+                                <span class="sirius__label-red">Не оплачен</span>
+                            </div>
+                        </div>
+                        <div class="sirius__list__table__row">
+                            <div class="sirius__list__table__col col-12">
+                                <span class="sirius__text-light">20.10.2020<br>14:56</span>
+                            </div>
+                            <div class="sirius__list__table__col col-12">
+                                <span class="sirius__text-light">20.10.2020<br>14:56</span>
+                            </div>
+                            <div class="sirius__list__table__col col-14">
+                                <i class="icon icon__scooter"></i>
+                                <span class="sirius__text no-margin-b">Самокат</span>
+                            </div>
+                            <div class="sirius__list__table__col col-50 align-left">
+                                <span class="sirius__text-bold mod-wd-100">Арендатор: Иванов Сергей В.</span>
+                                <span class="sirius__text">г. Сочи, ул. Космонавтов 32</span>
+                            </div>
+                            <div class="sirius__list__table__col col-12 align-right">
+                                <span class="sirius__label-green">Оплачен</span>
+                            </div>
+                        </div>
+                        <div class="sirius__list__table__row">
+                            <div class="sirius__list__table__col col-12">
+                                <span class="sirius__text-light">20.10.2020<br>14:56</span>
+                            </div>
+                            <div class="sirius__list__table__col col-12">
+                                <span class="sirius__text-light">20.10.2020<br>14:56</span>
+                            </div>
+                            <div class="sirius__list__table__col col-14">
+                                <i class="icon icon__scooter"></i>
+                                <span class="sirius__text no-margin-b">Самокат</span>
+                            </div>
+                            <div class="sirius__list__table__col col-50 align-left">
+                                <span class="sirius__text-bold mod-wd-100">Арендатор: Иванов Сергей В.</span>
+                                <span class="sirius__text">г. Сочи, ул. Космонавтов 32</span>
+                            </div>
+                            <div class="sirius__list__table__col col-12 align-right">
+                                <span class="sirius__label-red">Не оплачен</span>
+                            </div>
+                        </div>
+                        <div class="sirius__list__table__row">
+                            <div class="sirius__list__table__col col-12">
+                                <span class="sirius__text-light">20.10.2020<br>14:56</span>
+                            </div>
+                            <div class="sirius__list__table__col col-12">
+                                <span class="sirius__text-light">20.10.2020<br>14:56</span>
+                            </div>
+                            <div class="sirius__list__table__col col-14">
+                                <i class="icon icon__scooter"></i>
+                                <span class="sirius__text no-margin-b">Самокат</span>
+                            </div>
+                            <div class="sirius__list__table__col col-50 align-left">
+                                <span class="sirius__text-bold mod-wd-100">Арендатор: Иванов Сергей В.</span>
+                                <span class="sirius__text">г. Сочи, ул. Космонавтов 32</span>
+                            </div>
+                            <div class="sirius__list__table__col col-12 align-right">
+                                <span class="sirius__label-red">Не оплачен</span>
+                            </div>
+                        </div>
+                        <div class="sirius__list__table__row">
+                            <div class="sirius__list__table__col col-12">
+                                <span class="sirius__text-light">20.10.2020<br>14:56</span>
+                            </div>
+                            <div class="sirius__list__table__col col-12">
+                                <span class="sirius__text-light">20.10.2020<br>14:56</span>
+                            </div>
+                            <div class="sirius__list__table__col col-14">
+                                <i class="icon icon__scooter"></i>
+                                <span class="sirius__text no-margin-b">Самокат</span>
+                            </div>
+                            <div class="sirius__list__table__col col-50 align-left">
+                                <span class="sirius__text-bold mod-wd-100">Арендатор: Иванов Сергей В.</span>
+                                <span class="sirius__text">г. Сочи, ул. Космонавтов 32</span>
+                            </div>
+                            <div class="sirius__list__table__col col-12 align-right">
+                                <span class="sirius__label-red">Не оплачен</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sirius__fix-siz mod-pd-l-20">
+            <div class="sirius__side-block mod-mr-t-50">
+               <h3 class="sirius__side-block__title">Выписано штрафов в этом месяце</h3>
+                <span class="sirius__side-block__big-num">1234</span>
+                <div class="sirius__side-block__info">
+                    <div class="sirius__side-block__info__value value-green" style="height: 95%"></div>
+                    <div class="sirius__side-block__info__value value-red" style="height: 60%"></div>
+                </div>
+                <span class="sirius__text-light mod-mr-b-15">Оплачено / не оплачено</span>
+                <a href="#" class="sirius__side-block__btn">Вся статистика</a>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+
+</footer>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
